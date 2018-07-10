@@ -57,6 +57,7 @@ class App extends React.Component {
         <ul>
           {this.state.todos.map(todo => (
             <Todo
+              key={todo.id}
               todo={todo}
               onToggle={() => this.toggleTodo(todo.id)}
               onDelete={() => this.removeTodo(todo.id)}
